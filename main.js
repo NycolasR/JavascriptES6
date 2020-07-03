@@ -1,26 +1,40 @@
- /*
- const, let e var:
- Uma const (constante) não pode ter seu valor reatribuído
- */
+// Função map
 
- // Testes const
- const usuario = {
-     nome: 'Nycolas'
- };
+const arr = [1, 3, 4, 5, 8, 10];
 
- usuario.nome = 'Ramon';
+const newArr = arr.map(function(item) { // cada item do vetor passará por esta função
+    return item * 2; // para cada item em arr, item * 2 estará em newArr em seu índice análogo
+});
 
- console.log(usuario.nome);
+console.log(newArr);
 
- // Testes let
 
- function teste(x) {
-    let y = 2;
+// Função reduce
 
-    if(x > 5) {
-        let y = 4
-        console.log(x, y);
-    }
- }
+const sum = arr.reduce(function(total, proximoValor) {
+    return total + proximoValor;
+});
+// 1º iteração: total == 0, proximoValor == 1
+// o resultado será retornado para a próxima iteração
 
- teste(10)
+console.log(sum)
+
+
+// Função filter
+
+const filter = arr.filter(function(item) {
+    return item % 2 === 0; //filtra-se apenas os valores pares (cujo retorno será true)
+});
+
+console.log(filter)
+
+
+// Função find
+
+const find = arr.find(function(item) {
+    return item === 2;
+    // o valor de find será retornado se for igual ao que está sendo comparado
+    // caso contrário, será undefined
+});
+
+console.log(find)
