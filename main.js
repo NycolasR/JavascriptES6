@@ -1,9 +1,12 @@
-class Teste {
-    metodo() {
-
+class TodoList {
+    constructor() {
+        this.todos = []
     }
 
-    outro() {
-
+    static addTodo() { // método estático
+        this.todos.push('Novo todo'); // vai dar erro, pois métodos estáticos não enxergam o resto da classe
+        console.log(this.todos);
     }
 }
+
+TodoList.addTodo();
