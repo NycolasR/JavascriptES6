@@ -1,12 +1,26 @@
-class TodoList {
-    constructor() {
-        this.todos = []
-    }
+ /*
+ const, let e var:
+ Uma const (constante) não pode ter seu valor reatribuído
+ */
 
-    static addTodo() { // método estático
-        this.todos.push('Novo todo'); // vai dar erro, pois métodos estáticos não enxergam o resto da classe
-        console.log(this.todos);
-    }
-}
+ // Testes const
+ const usuario = {
+     nome: 'Nycolas'
+ };
 
-TodoList.addTodo();
+ usuario.nome = 'Ramon';
+
+ console.log(usuario.nome);
+
+ // Testes let
+
+ function teste(x) {
+    let y = 2;
+
+    if(x > 5) {
+        let y = 4
+        console.log(x, y);
+    }
+ }
+
+ teste(10)
