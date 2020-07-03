@@ -1,24 +1,10 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 6];
-var newArr = arr.map(function (item) {
-  return item * 2;
-}); //Para cada item, tem-se que seu retorno será item * 2
+var soma = function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  return a + b;
+};
 
-console.log(newArr);
-
-var teste = function teste() {
-  return 'teste';
-}; // atribuindo uma arrow function a uma constante.
-
-
-console.log(teste());
-
-var obj = function obj() {
-  return {
-    nome: 'Nycolas'
-  };
-}; //usa-se parênteses ao retornar um objeto
-
-
-console.log(obj());
+console.log(soma(1));
+console.log(soma());
