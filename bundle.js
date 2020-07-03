@@ -1,10 +1,25 @@
 "use strict";
 
-var soma = function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  return a + b;
-};
+// Desestruturação de objetos
+var usuario = {
+  nome: 'Nycolas',
+  idade: 19,
+  endereco: {
+    cidade: 'Patos',
+    estado: 'PB'
+  }
+}; // Buscando elementos desestruturando o objeto
 
-console.log(soma(1));
-console.log(soma());
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+function getNome(_ref) {
+  var nome = _ref.nome;
+  console.log(nome);
+}
+
+getNome(usuario);

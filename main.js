@@ -1,4 +1,24 @@
-const soma = (a=0, b=0) => a + b;
+// Desestruturação de objetos
 
-console.log(soma(1))
-console.log(soma())
+const usuario = {
+    nome: 'Nycolas',
+    idade: 19,
+    endereco: {
+        cidade: 'Patos',
+        estado: 'PB',
+
+    },
+};
+
+// Buscando elementos desestruturando o objeto
+const { nome, idade, endereco: { cidade } } = usuario;
+
+console.log(nome)
+console.log(idade)
+console.log(cidade)
+
+function getNome({ nome }) {
+    console.log(nome)
+}
+
+getNome(usuario)
