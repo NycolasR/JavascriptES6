@@ -1,15 +1,14 @@
-import axios from 'axios';
+// Respostas - Lista do módulo 2
+// 1.1
+import ClasseUsuario from './functions';
 
-class Api {
-    static async getUserInfo(username) {
-        try {
-            const response = await axios.get(`https://api.github.com/users/${username}`)
-            console.log(response)
-        } catch(err) {
-            console.warn('Erro na Api')
-        }
-    }
-}
+ClasseUsuario.info()
 
-Api.getUserInfo('NycolasR'); // try executará
-Api.getUserInfo('NycolasdddddR'); // catch executará
+// 1.2
+import { idade } from './functions';
+console.log(`A idade do usuário é de ${idade} anos`)
+
+// 1.3
+import ClasseUsuario2, { idade as idadeUsuario } from './functions';
+ClasseUsuario2.info()
+console.log(idadeUsuario)
